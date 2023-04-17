@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-heading;
+}
+
+#hero {
+  width: 100%;
+  background: url("../images/bg-pattern-intro-mobile.svg"),
+    linear-gradient(90deg, rgb(255, 143, 112) 10%, rgb(255, 61, 84) 58%);
+  background-position-x: 33%, 0%;
+  background-position-y: 30%, 0%;
+  background-size: auto, auto;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  border-bottom-left-radius: 100px;
+  color: white;
+}
+
+header {
+  position: absolute;
+}
+
+h2 {
+  @apply text-veryDarkBlue font-bold;
+}
+
+.news-letter-fix a::before {
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.section-bar {
+  background: url("../images/bg-pattern-circles.svg"),
+    linear-gradient(90deg, rgb(44, 45, 63), rgb(63, 65, 96));
+  background-repeat: no-repeat;
+  background-position-y: 135%, 0%;
+  background-position-x: 50%, 0%;
+  border-bottom-left-radius: 100px;
+  min-height: 685px;
+  position: relative;
+}
+
+.section-bar-desktop {
+  background: url("../images/bg-pattern-circles.svg"),
+    linear-gradient(90deg, rgb(44, 45, 63), rgb(63, 65, 96));
+  background-repeat: no-repeat;
+  background-position-y: 100%, 0%;
+  background-position-x: -5%, 0%;
+  border-bottom-left-radius: 100px;
+  max-height: 500px;
+  position: relative;
+}
+
+.phones-img {
+  bottom: 250px;
+}
+
+.phones-img-desktop {
+  bottom: 100px;
+}
+
+.illustration-img-desktop {
+  left: 75%;
+  bottom: -50%;
+}
+
+.laptop-img-desktop {
+  width: 100%;
+  transform: scale(1.2);
+  right: 33%;
+  bottom: 20%;
+}
+
+.cta-mobile-btn {
+  background: linear-gradient(
+    90deg,
+    rgb(255, 143, 112) 10%,
+    rgb(255, 61, 84) 58%
+  );
+}
+
+@media screen and (min-width: 1440px) and (max-width: 2100px);
+ {
+  .illustration-img-desktop {
+    left: 65%;
+    bottom: -50%;
+  }
+}
+
+footer {
+  border-top-right-radius: 100px;
+}
+
+@media screen and (max-width: 480px);
+ {
+  .phones-img {
+    bottom: 450px;
+  }
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  width: 30px;
+  height: 1.5px;
+  background: #fff;
+  transform: rotate(0);
+  transition: all 0.5s;
+  padding-right: 20px;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+.nav-menu {
+  width: 100%;
+  max-width: 90%;
+  min-height: 250px;
+  top: 150%;
+  left: 3%;
+}
+
+@media screen and (max-width: 400px);
+ {
+  .nav-div {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 481px);
+ {
+  .phones-img {
+    bottom: 420px;
+    max-width: 480px;
+  }
+
+  .hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom {
+    right: 45px;
+  }
+}
+
+@media screen and (min-width: 768px);
+ {
+  .illustration-img,
+  .laptop-img {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  #hero {
+    background: url("../images/bg-pattern-intro-desktop.svg"),
+      linear-gradient(90deg, rgb(255, 143, 112) 10%, rgb(255, 61, 84) 58%);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 25%;
+  }
+}
+
+@media screen and (min-width: 768px);
+ {
+  .illustration-img {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media screen and (min-width: 976px);
+ {
+  #hero {
+    background: url("../images/bg-pattern-intro-desktop.svg"),
+      linear-gradient(90deg, rgb(255, 143, 112) 10%, rgb(255, 61, 84) 58%);
+  }
+}
