@@ -1205,6 +1205,10 @@ footer {
   #hero {
     background: url("../images/bg-pattern-intro-desktop.svg"),
       linear-gradient(90deg, rgb(255, 143, 112) 10%, rgb(255, 61, 84) 58%);
+    background-size: 120%;
+    background-position-y: 50%, 0%;
+    background-position-x: 0%, 0%;
+    background-repeat: no-repeat;
   }
 }
 
